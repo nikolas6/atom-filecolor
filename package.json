@@ -6,7 +6,7 @@
   "description": "Add color to filename",
   "keywords": [
   ],
-  "repository": "https://github.com/nikolas6/atom-filecolor.git",
+  "repository": "https://github.com/nikolas6/atom-filecolor",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

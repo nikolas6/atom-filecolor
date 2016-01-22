@@ -2,15 +2,13 @@
   "name": "filecolor",
   "author": "Paul Nikolas Phoa",
   "main": "./lib/filecolor",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Add color to filename",
-  "keywords": [
-  ],
+  "keywords": [],
   "repository": "https://github.com/nikolas6/atom-filecolor",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

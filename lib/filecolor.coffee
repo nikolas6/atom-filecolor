@@ -3,12 +3,16 @@ FilecolorView = require './filecolor-view'
 
 module.exports = Filecolor =
   filecolorView: null
-  modalPanel: null
+  isActive: null
+
+  # modalPanel: null
   subscriptions: null
 
   activate: (state) ->
     atom.packages.activatePackage('tree-view').then ->
-      @filecolorView = new FilecolorView(state.fileColorsViewState)
+      Filecolor.filecolorView = new FilecolorView(state.fileColorsViewState)
+      Filecolor.isActive = true;
+      return
 
     # @filecolorView = new FilecolorView(state.filecolorViewState)
     # @modalPanel = atom.workspace.addModalPanel(item: @filecolorView.getElement(), visible: false)
@@ -20,7 +24,7 @@ module.exports = Filecolor =
     @subscriptions.add atom.commands.add 'atom-workspace', 'filecolor:toggle': => @toggle()
 
   deactivate: ->
-    @modalPanel.destroy()
+    # @modalPanel.destroy()
     @subscriptions.dispose()
     @filecolorView.destroy()
 
@@ -28,9 +32,14 @@ module.exports = Filecolor =
     filecolorViewState: @filecolorView.serialize()
 
   toggle: ->
-    console.log 'Filecolor was toggled!'
 
-    # if @modalPanel.isVisible()
-    #   @modalPanel.hide()
-    # else
-    #   @modalPanel.show()
+    if @isActive == true
+      # remove colors
+      @isActive = false
+      @filecolorView.removeColors()
+    else
+      # apply colors
+      @isActive = true
+      @filecolorView.applyColors()
+
+    return

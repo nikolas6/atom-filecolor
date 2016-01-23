@@ -6,10 +6,10 @@ class FilecolorView
     @element.classList.add('filecolor')
 
     # Create message element
-    message = document.createElement('div')
-    message.textContent = "The Filecolor package is Alive! It's ALIVE!"
-    message.classList.add('message')
-    @element.appendChild(message)
+    # message = document.createElement('div')
+    # message.textContent = "The Filecolor package is Alive! It's ALIVE!"
+    # message.classList.add('message')
+    # @element.appendChild(message)
 
     # apply colors
     this.applyColors()
@@ -26,26 +26,25 @@ class FilecolorView
 
   removeColors: ->
     # remove file colors from tree view
-    treeViewEl = document.querySelectorAll('.tree-view')[0];
-    treeViewEl.classList.remove('file-colors')
-
     # remove file colors from tab bar
+    treeViewEl = document.querySelectorAll('.tree-view')[0];
     tabBar = document.querySelectorAll('.list-inline.tab-bar')[0];
+    treeViewEl.classList.remove('file-colors')
     tabBar.classList.remove('file-colors')
 
     # show message
-    displayText = "Colors removed from files"
-    @element.children[0].textContent = displayText
+    # displayText = "Colors removed from files"
+    # @element.children[0].textContent = displayText
 
   applyColors: ->
     # apply file colors to tree view
-    treeViewEl = document.querySelectorAll('.tree-view')[0];
-    treeViewEl.classList.add('file-colors')
-
     # apply file colors to tab bar
+    treeViewEl = document.querySelectorAll('.tree-view')[0];
     tabBar = document.querySelectorAll('.list-inline.tab-bar')[0];
+
+    treeViewEl.classList.add('file-colors')
     tabBar.classList.add('file-colors')
 
     # show message
-    displayText = "Colors applied to files"
-    @element.children[0].textContent = displayText
+    # displayText = "Colors applied to files"
+    # @element.children[0].textContent = displayText

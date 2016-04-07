@@ -2,6 +2,4 @@
 
 Add color to filename.
 
-***-- Need [Atom Tree View Package](https://github.com/atom/tree-view) to work***
-
-![A screenshot of your package](screenshot.png)
+![A screenshot of your package](https://raw.githubusercontent.com/nikolas6/atom-filecolor/master/screenshot.png)

@@ -9,10 +9,13 @@ module.exports = Filecolor =
   subscriptions: null
 
   activate: (state) ->
-    atom.packages.activatePackage('tree-view').then ->
-      Filecolor.filecolorView = new FilecolorView(state.fileColorsViewState)
-      Filecolor.isActive = true;
-      return
+    # atom.packages.activatePackage('tree-view').then ->
+    #   Filecolor.filecolorView = new FilecolorView(state.fileColorsViewState)
+    #   Filecolor.isActive = true;
+    #   return
+
+    Filecolor.filecolorView = new FilecolorView(state.fileColorsViewState)
+    Filecolor.isActive = true;
 
     # @filecolorView = new FilecolorView(state.filecolorViewState)
     # @modalPanel = atom.workspace.addModalPanel(item: @filecolorView.getElement(), visible: false)

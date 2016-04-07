@@ -27,10 +27,10 @@ class FilecolorView
   removeColors: ->
     # remove file colors from tree view
     # remove file colors from tab bar
-    treeViewEl = document.querySelectorAll('.tree-view')[0];
-    tabBar = document.querySelectorAll('.list-inline.tab-bar')[0];
-    treeViewEl.classList.remove('file-colors')
-    tabBar.classList.remove('file-colors')
+    treeViewEl = document.querySelector('.tree-view');
+    tabBar = document.querySelector('.list-inline.tab-bar');
+    treeViewEl.classList.remove('file-colors') if treeViewEl;
+    tabBar.classList.remove('file-colors') if tabBar;
 
     # show message
     # displayText = "Colors removed from files"
@@ -42,8 +42,8 @@ class FilecolorView
     treeViewEl = document.querySelectorAll('.tree-view')[0];
     tabBar = document.querySelectorAll('.list-inline.tab-bar')[0];
 
-    treeViewEl.classList.add('file-colors')
-    tabBar.classList.add('file-colors')
+    treeViewEl.classList.add('file-colors') if treeViewEl;
+    tabBar.classList.add('file-colors') if tabBar;
 
     # show message
     # displayText = "Colors applied to files"

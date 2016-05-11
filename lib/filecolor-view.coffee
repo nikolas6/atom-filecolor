@@ -25,26 +25,11 @@ class FilecolorView
     @element
 
   removeColors: ->
-    # remove file colors from tree view
-    # remove file colors from tab bar
-    treeViewEl = document.querySelector('.tree-view');
-    tabBar = document.querySelector('.list-inline.tab-bar');
-    treeViewEl.classList.remove('file-colors') if treeViewEl;
-    tabBar.classList.remove('file-colors') if tabBar;
-
-    # show message
-    # displayText = "Colors removed from files"
-    # @element.children[0].textContent = displayText
+    # remove file colors from atom-workspace
+    workspace = document.querySelector('atom-workspace');
+    workspace.classList.remove('file-colors') if workspace;
 
   applyColors: ->
-    # apply file colors to tree view
-    # apply file colors to tab bar
-    treeViewEl = document.querySelectorAll('.tree-view')[0];
-    tabBar = document.querySelectorAll('.list-inline.tab-bar')[0];
-
-    treeViewEl.classList.add('file-colors') if treeViewEl;
-    tabBar.classList.add('file-colors') if tabBar;
-
-    # show message
-    # displayText = "Colors applied to files"
-    # @element.children[0].textContent = displayText
+    # apply file colors to atom-workspace
+    workspace = document.querySelector('atom-workspace');
+    workspace.classList.add('file-colors') if workspace;

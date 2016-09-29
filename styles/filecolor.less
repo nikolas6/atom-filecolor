@@ -26,6 +26,8 @@
 @scss: #d06299;
 @txt: #d3d6d5;
 @xml: #f99449;
+@rust: #dea584;
+@go: #6a9fb5;
 
 @gitignore: #3f535b;
 
@@ -221,6 +223,24 @@
 
     .tab.active & {
       color: saturate(@xml, 100%);
+    }
+  }
+
+  .name.icon[data-name$=".rs"],
+  .title[data-name$=".rs"] {
+    color: saturate(@rust, 20%);
+
+    .tab.active & {
+      color: saturate(@rust, 100%);
+    }
+  }
+
+  .name.icon[data-name$=".go"],
+  .title[data-name$=".go"] {
+    color: saturate(@go, 20%);
+
+    .tab.active & {
+      color: saturate(@go, 100%);
     }
   }
 
